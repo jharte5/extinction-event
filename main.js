@@ -26,6 +26,22 @@ function poofBeGone (event) {
         vanishingImages[i].addEventListener('click', poofBeGone)
     }
 
+const doEverything = document.querySelectorAll('button')
 
- 
+function doItAll() {
+    
+    for (let i = 0; i < lineThrough.length; i++) {
+        lineThrough[i].addEventListener('click', strikeOut);
+    }
+    for (let i = 0; i <disappearingLines.length; i++) {
+        disappearingLines[i].addEventListener('click', lightsOut)
+    }
+    for (let i= 0; i < vanishingImages.length; i++) {
+        vanishingImages[i].addEventListener('click', poofBeGone)
+    }
+    doEverything.addEventListener('click', doItAll)
+}
+
+    
+
 
