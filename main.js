@@ -16,7 +16,15 @@ function lightsOut(event) {
     for (let i = 0; i <disappearingLines.length; i++) {
         disappearingLines[i].addEventListener('click', lightsOut)
     }
-    
+
+const vanishingImages = document.querySelectorAll('img')
+
+function poofBeGone (event) {
+    event.target.style.width = '0px'
+}
+    for (let i= 0; i < vanishingImages.length; i++) {
+        vanishingImages[i].addEventListener('click', poofBeGone)
+    }
 
 
  
