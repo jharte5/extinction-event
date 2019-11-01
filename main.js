@@ -26,19 +26,20 @@ function poofBeGone (event) {
         vanishingImages[i].addEventListener('click', poofBeGone)
     }
 
-const doEverything = document.querySelectorAll('button')
+const doEverything = document.querySelectorAll('button');
 
 function doItAll() {
     
     for (let i = 0; i < lineThrough.length; i++) {
-        lineThrough[i].addEventListener('click', strikeOut);
+        lineThrough[i].style.width = '0px'
     }
     for (let i = 0; i <disappearingLines.length; i++) {
-        disappearingLines[i].addEventListener('click', lightsOut)
+        disappearingLines[i].style.opacity = 0
     }
     for (let i= 0; i < vanishingImages.length; i++) {
-        vanishingImages[i].addEventListener('click', poofBeGone)
+        vanishingImages[i].style.width = '0px'
     }
+    
     doEverything.addEventListener('click', doItAll)
 }
 
