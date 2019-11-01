@@ -11,8 +11,12 @@ function strikeOut(event) {
 const disappearingLines = document.querySelectorAll('ul li')
 
 function lightsOut(event) {
-    event.target.style
+    event.target.style.opacity = 0
 }
+    for (let i = 0; i <disappearingLines.length; i++) {
+        disappearingLines[i].addEventListener('click', lightsOut)
+    }
+    
 
 
  
