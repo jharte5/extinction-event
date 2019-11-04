@@ -14,7 +14,7 @@ function lightsOut(event) {
     event.target.style.opacity = 0
 }
     for (let i = 0; i <disappearingLines.length; i++) {
-        disappearingLines[i].addEventListener('click', lightsOut)
+        disappearingLines[i].addEventListener('click', lightsOut);
     }
 
 const vanishingImages = document.querySelectorAll('img')
@@ -22,26 +22,26 @@ const vanishingImages = document.querySelectorAll('img')
 function poofBeGone (event) {
     event.target.style.width = '0px'
 }
-    for (let i= 0; i < vanishingImages.length; i++) {
-        vanishingImages[i].addEventListener('click', poofBeGone)
+    for (let i = 0; i < vanishingImages.length; i++) {
+        vanishingImages[i].addEventListener('click', poofBeGone);
     }
 
-const doEverything = document.querySelectorAll('button');
+const doEverything = document.querySelector('#toggle')
 
 function doItAll() {
     
     for (let i = 0; i < lineThrough.length; i++) {
-        lineThrough[i].style.width = '0px'
+        lineThrough[i].style.textDecoration = 'line-through';
     }
     for (let i = 0; i <disappearingLines.length; i++) {
-        disappearingLines[i].style.opacity = 0
+        disappearingLines[i].style.opacity = '0';
     }
-    for (let i= 0; i < vanishingImages.length; i++) {
-        vanishingImages[i].style.width = '0px'
+    for (let i = 0; i < vanishingImages.length; i++) {
+        vanishingImages[i].style.width = '0px';
     }
     
-    doEverything.addEventListener('click', doItAll)
 }
+doEverything.addEventListener('click', doItAll)
 
     
 
